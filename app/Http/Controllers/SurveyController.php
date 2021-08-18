@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Http\Requests\EmailRequest;
 use App\Models\Answer;
 use App\Models\Food;
 use App\Models\Pet;
@@ -24,7 +25,7 @@ class SurveyController extends Controller
         return view('welcome');
     }
 
-    public function createEmail(Request $request): RedirectResponse
+    public function createEmail(EmailRequest $request): RedirectResponse
     {
         $email = $request->input('email');
         $user = User::where('email', $email)->first();
