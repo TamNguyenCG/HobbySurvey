@@ -19,7 +19,7 @@ use Illuminate\Support\Facades\Session;
 
 
 Route::get('/',[SurveyController::class,'welcome'])->name('welcome');
-Route::post('/',[SurveyController::class,'createEmail'])->name('createEmail');
+Route::get('/survey',[SurveyController::class,'createEmail'])->name('createEmail');
 
 Route::get('food',[FoodController::class,'getAllFoods'])->name('showFoods');
 Route::get('food/{id?}',[FoodController::class,'selectFood'])->name('selectFood');

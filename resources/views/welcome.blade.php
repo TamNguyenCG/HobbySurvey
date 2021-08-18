@@ -21,8 +21,7 @@
         }
     </style>
     <p>Welcome to survey</p>
-    <form method="post" action="{{route('createEmail')}}">
-        @csrf
+    <form method="get" action="{{route('createEmail')}}">
         <div class="form-group" style="text-align: center">
             <label> Insert your email to begin
             <input type="email" class="form-control" placeholder="Email" name="email" required>
